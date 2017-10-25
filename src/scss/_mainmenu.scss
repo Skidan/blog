@@ -1,0 +1,74 @@
+#logo {
+	display: block;
+	width: 100%;
+	height: $basic * 4;
+	background-image: url(../img/owl.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	@media screen and (min-width: 721px) {
+		display: none;
+	}
+}
+
+#menu_btn {
+	display: block;
+	height: $basic * 2;
+	background-color: $color-main;
+	text-align: center;
+	line-height: $basic * 2;
+	@media screen and (min-width: 321px) and (max-width: 720px) {
+		display: inline-block;
+		width: $basic * 2;
+		height: $basic * 2;
+		position: absolute;
+		right: 0;
+		top: $basic/2;
+	}
+	@media screen and (min-width: 721px) {
+		display: none;
+	}
+}
+
+.menu_link {
+	display: block;
+	line-height: $basic * 1.5;
+	color: $color-greydark;
+	&:hover {
+		color: $color-main;
+	}
+	&:active {
+		color: $color-greylight;
+		background-color: $color-main;
+	}
+	@media screen and (min-width: 320px) {
+		line-height: $basic * 3;
+		margin: 0 $basic;
+		padding: 0 $basic/2;
+		border-radius: $basic / 2;
+		transition: background-color 0.3s, color 0.3s;
+	}
+}
+
+.menu_logo {
+	display: none;
+	@media screen and (min-width: 721px) {
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+.img_logo {
+	height: $basic * 3;
+}
+.menu_item {
+	display: block;
+	@media screen and (min-width: 721px) {
+		display: inline-block;
+		vertical-align: top;
+		border-radius: $basic/2;
+	}
+}
+
+.menu_list {
+	text-align: center;
+}

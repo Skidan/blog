@@ -1,0 +1,24 @@
+// FONT INIT (for inline-blocks)
+a, p, h1, h2, h3, h4, h5, h6, #menu_btn
+{font-size: $basic; font-family: $font-main;}
+
+// COMMON STYLES
+html, body {
+  height: 100%;
+  width: 100%;
+  min-width: 120px;
+}
+a {
+  color: $color-main;
+  text-decoration: none;
+  line-height: $basic;
+  &:hover {
+    color: lighten($color-main, 15%);
+  }
+  &:active {
+    color: $color-main;
+  }
+}
+section {
+  height: 100vh;
+}
