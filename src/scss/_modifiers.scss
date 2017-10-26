@@ -1,3 +1,7 @@
 .hidden {
 	display: none !important;
 }
+.showmenu {
+	transition: height .3s;
+	height: auto;
+}

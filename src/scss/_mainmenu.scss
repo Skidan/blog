@@ -1,23 +1,33 @@
+
 #logo {
 	display: block;
+	position: relative;
 	width: 100%;
-	height: $basic * 4;
-	background-image: url(../img/owl.png);
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+	height: 35vw;
+	max-height: $basic * 4;
 	@media screen and (min-width: 721px) {
 		display: none;
 	}
 }
+svg.owllogo {
+	max-height: $basic * 4;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+.owl {
+	fill: $color-main;
+}
 
+// Button toggle menu
 #menu_btn {
 	display: block;
 	height: $basic * 2;
-	background-color: $color-main;
+	background-color: $color-greylight;
 	text-align: center;
 	line-height: $basic * 2;
-	@media screen and (min-width: 321px) and (max-width: 720px) {
+	@media screen and (min-width: 321px) and (max-width: 490px) {
 		display: inline-block;
 		width: $basic * 2;
 		height: $basic * 2;
@@ -25,11 +35,43 @@
 		right: 0;
 		top: $basic/2;
 	}
-	@media screen and (min-width: 721px) {
+	@media screen and (min-width: 491px) {
 		display: none;
 	}
 }
+.menu_icon_dash {
+  fill: $color-main;
+  transform-origin: 50% 50%;
+  opacity: 100;
+  transition: transform .3s, opacity .3s;
+}
+#menu_icon {
+  border-radius: $basic / 4;
+	width: $basic * 2;
+	height: $basic * 2;
+	transition: background-color .3s;
+}
+#menu_icon:hover {
+  cursor: pointer;
+  background-color: $color-main;
+  .menu_icon_dash {
+    fill: $color-greylight;
+  }
+}
+.menuexpanded {
+  #dash_top {
+    transform: translateY(190%) rotate(45deg);
+  }
+  #dash_bottom {
+    transform: translateY(-190%) rotate(135deg);
+  }
+  #dash_middle {
+    transform: rotate(135deg);
+    opacity: 0;
+  }
+}
 
+// Mainmenu
 .menu_link {
 	display: block;
 	line-height: $basic * 1.5;
@@ -43,9 +85,9 @@
 	}
 	@media screen and (min-width: 320px) {
 		line-height: $basic * 3;
-		margin: 0 $basic;
-		padding: 0 $basic/2;
-		border-radius: $basic / 2;
+		padding: 0 $basic * 2;
+		border-bottom-left-radius: $basic / 2;
+		border-bottom-right-radius: $basic / 2;
 		transition: background-color 0.3s, color 0.3s;
 	}
 }
@@ -57,12 +99,20 @@
 		vertical-align: top;
 	}
 }
-.img_logo {
+
+.link_logo {
 	height: $basic * 3;
+	width: $basic * 9;
+	padding: 0 $basic / 2;
+	background-image: $owl;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center center;
 }
+
 .menu_item {
 	display: block;
-	@media screen and (min-width: 721px) {
+	@media screen and (min-width: 491px) {
 		display: inline-block;
 		vertical-align: top;
 		border-radius: $basic/2;
@@ -70,5 +120,12 @@
 }
 
 .menu_list {
+	height: 0;
+	overflow: hidden;
+	//outline: $test;
 	text-align: center;
+	transition: height .3s;	
+	@media screen and (min-width: 491px) {
+		height: auto;
+	}
 }
