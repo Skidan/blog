@@ -122,9 +122,8 @@ svg.owllogo {
 .menu_list {
 	height: 0;
 	overflow: hidden;
-	//outline: $test;
 	text-align: center;
-	transition: height .3s;	
+	transition: height .3s;
 	@media screen and (min-width: 491px) {
 		height: auto;
 	}
