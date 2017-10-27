@@ -83,7 +83,7 @@ svg.owllogo {
 		color: $color-greylight;
 		background-color: $color-main;
 	}
-	@media screen and (min-width: 320px) {
+	@media screen and (min-width: 321px) {
 		line-height: $basic * 3;
 		padding: 0 $basic * 2;
 		border-bottom-left-radius: $basic / 2;
@@ -101,13 +101,10 @@ svg.owllogo {
 }
 
 .link_logo {
+	position: relative;
 	height: $basic * 3;
 	width: $basic * 9;
 	padding: 0 $basic / 2;
-	background-image: $owl;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center center;
 }
 
 .menu_item {
@@ -125,6 +122,6 @@ svg.owllogo {
 	text-align: center;
 	transition: height .3s;
 	@media screen and (min-width: 491px) {
-		height: auto;
+		height: $basic * 3;
 	}
 }

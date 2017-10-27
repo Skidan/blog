@@ -2,6 +2,8 @@
 	display: none !important;
 }
 .showmenu {
-	transition: height .3s;
-	height: auto;
+	height: $basic * 6;
+	@media screen and (min-width: 321px) {
+		height: $basic * 12;
+	}
 }
