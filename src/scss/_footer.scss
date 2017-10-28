@@ -1,0 +1,97 @@
+#socials {
+  background-color: $color-main;
+  display: block;
+  text-align: center;
+}
+.social_icon {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: $basic * 3;
+  text-align: center;
+  transition: background-color .3s;
+  &:hover {
+    background-color: $color-greylight;
+  }
+  @media screen and (min-width: 300px) {
+    display: inline-block;
+    width: $basic * 3;
+  }
+}
+.social_icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: $basic * 2.5;
+  //margin: $basic / 4 auto;
+}
+#git {
+  .github_icon {
+    fill: $color-greylight;
+    transition: fill .3s;
+  }
+  &:hover {
+    .github_icon {
+      fill: #455a64;
+    }
+  }
+}
+#cp {
+  .codepen_icon {
+    fill: $color-greylight;
+    transition: fill .3s;
+  }
+  &:hover {
+    .codepen_icon {
+      fill: #000000;
+    }
+  }
+}
+#so {
+  .bucket, .stack {
+    fill: $color-greylight;
+    transition: fill .3s;
+  }
+  &:hover {
+    .bucket {
+      fill: #bcbbbb;
+    }
+    .stack {
+      fill: #f48023;
+    }
+  }
+}
+#in {
+  .linkedin_icon {
+    fill: $color-greylight;
+    transition: fill .3s;
+  }
+  &:hover {
+    .linkedin_icon {
+      fill: #007ab9;
+    }
+  }
+}
+#yt {
+  .youtube_icon {
+    fill: $color-greylight;
+    transition: fill .3s;
+  }
+  &:hover {
+    .youtube_icon {
+      fill: #d32322;
+    }
+  }
+}
+#fb {
+  .facebook_icon {
+    fill: $color-greylight;
+    transition: fill .3s;
+  }
+  &:hover {
+    .facebook_icon {
+      fill: #475993;
+    }
+  }
+}

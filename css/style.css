@@ -32,18 +32,15 @@ a:active {
   color: #3e596a;
 }
 
-section {
-  height: 100vh;
-}
-
 #wrapper {
   height: 100%;
   width: 100%;
   min-width: 120px;
+  display: table;
 }
 
 #header, #main, #footer {
-  display: block;
+  display: table-row;
   width: 100%;
   margin: 0 auto;
   background-color: #d9d7da;
@@ -65,6 +62,10 @@ section {
   #header, #main, #footer {
     width: 1240px;
   }
+}
+
+#main {
+  height: 100%;
 }
 
 #logo {
@@ -220,6 +221,98 @@ svg.owllogo {
   .menu_list {
     height: 48px;
   }
+}
+
+#socials {
+  background-color: #3e596a;
+  display: block;
+  text-align: center;
+}
+
+.social_icon {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 48px;
+  text-align: center;
+  transition: background-color .3s;
+}
+
+.social_icon:hover {
+  background-color: #d9d7da;
+}
+
+@media screen and (min-width: 300px) {
+  .social_icon {
+    display: inline-block;
+    width: 48px;
+  }
+}
+
+.social_icon svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 40px;
+}
+
+#git .github_icon {
+  fill: #d9d7da;
+  transition: fill .3s;
+}
+
+#git:hover .github_icon {
+  fill: #455a64;
+}
+
+#cp .codepen_icon {
+  fill: #d9d7da;
+  transition: fill .3s;
+}
+
+#cp:hover .codepen_icon {
+  fill: #000000;
+}
+
+#so .bucket, #so .stack {
+  fill: #d9d7da;
+  transition: fill .3s;
+}
+
+#so:hover .bucket {
+  fill: #bcbbbb;
+}
+
+#so:hover .stack {
+  fill: #f48023;
+}
+
+#in .linkedin_icon {
+  fill: #d9d7da;
+  transition: fill .3s;
+}
+
+#in:hover .linkedin_icon {
+  fill: #007ab9;
+}
+
+#yt .youtube_icon {
+  fill: #d9d7da;
+  transition: fill .3s;
+}
+
+#yt:hover .youtube_icon {
+  fill: #d32322;
+}
+
+#fb .facebook_icon {
+  fill: #d9d7da;
+  transition: fill .3s;
+}
+
+#fb:hover .facebook_icon {
+  fill: #475993;
 }
 
 .hidden {
