@@ -4,21 +4,15 @@
 	min-width: 120px;
 	display: table;
 }
-
 #header, #main, #footer {
 	display: table-row;
 	width: 100%;
 	margin: 0 auto;
 	background-color: $color-greylight;
-	@media screen and (min-width: 721px) and (max-width: 960px) {
-		width: 680px;
-	}
-	@media screen and (min-width: 961px) and (max-width: 1280px) {
-		width: 920px;
-	}
-	@media screen and (min-width: 1281px) and (max-width: 1920px) {
-		width: 1240px;
-	}
+}
+#motto {
+	display: block;
+	text-align: center;
 }
 #main {
 	height: 100%

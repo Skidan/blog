@@ -1,5 +1,5 @@
 // FONT INIT (for inline-blocks)
-a, p, h1, h2, h3, h4, h5, h6, #menu_btn
+a, p, h1, h2, h3, h4, h5, h6, input, #menu_btn
 {font-size: $basic; font-family: $font-main;}
 
 // COMMON STYLES
@@ -19,6 +19,34 @@ a {
     color: $color-main;
   }
 }
-section {
-  //height: 100vh;
+section, #contacts, #socials {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  //outline: $test;
+  @media screen and (min-width: 721px) and (max-width: 960px) {
+    width: 680px;
+  }
+  @media screen and (min-width: 961px) and (max-width: 1280px) {
+    width: 920px;
+  }
+  @media screen and (min-width: 1281px) and (max-width: 1920px) {
+    width: 1240px;
+  }
+  @media screen and (min-width: 1921px) {
+    width: 1880px;
+  }
+}
+
+.quote {
+  display: inline-block;
+  font-style: oblique;
+  color: $color-greydark;
+  width: 80%;
+  &::before {
+    content:"\"";
+  }
+  &::after {
+    content:"\"";
+  }
 }

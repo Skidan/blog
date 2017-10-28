@@ -4,13 +4,13 @@
 	position: relative;
 	width: 100%;
 	height: 35vw;
-	max-height: $basic * 4;
+	max-height: $basic * 3;
 	@media screen and (min-width: 721px) {
 		display: none;
 	}
 }
 svg.owllogo {
-	max-height: $basic * 4;
+	max-height: $basic * 3;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -32,8 +32,8 @@ svg.owllogo {
 		width: $basic * 2;
 		height: $basic * 2;
 		position: absolute;
-		right: 0;
-		top: $basic/2;
+		right: $basic / 2;
+		top: $basic / 2;
 	}
 	@media screen and (min-width: 491px) {
 		display: none;
@@ -124,4 +124,9 @@ svg.owllogo {
 	@media screen and (min-width: 491px) {
 		height: $basic * 3;
 	}
+}
+
+.motto {
+	width: 40vw;
+	margin: $basic * 3 auto;
 }
