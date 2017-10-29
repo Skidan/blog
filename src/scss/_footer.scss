@@ -4,27 +4,43 @@
 }
 
 #contacts {
-  background: url(../img/footr.jpg) center no-repeat;
-  background-size: cover;
+  background: $color-main;
+  @media screen and (min-width: 721px) {
+    background: url(../img/footr.jpg) center no-repeat;
+    background-size: cover;
+  }
 }
 .image {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 35%;
-  margin: 5%;
-  padding: 2.5%;
-  //outline: $test;
+  display: none;
+  @media screen and (min-width: 721px) {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 35%;
+    margin: 5%;
+    padding: 2.5%;
+  }  
 }
 .content {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 35%;
-  margin: 5%;
-  background-color: rgba(255,255,255,.5);
-  padding: 2.5%;
-  h3 {
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $color-greylight;
+  //outline: $test;
+  overflow: hidden;
+  > * {margin: $basic/2 $basic;}
+  @media screen and (min-width: 721px) {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    margin: 5%;
+    background-color: rgba(255,255,255,.5);
+    padding: 2.5%;
+  }
+
+  h3 { 
     color: $color-dark;
     line-height: $basic * 1.5;
   }
@@ -44,23 +60,28 @@
     }
   }
   #fromemail, #lettertitle {
-    width: 100%;
-    margin: $basic auto;
-    line-height: $basic * 2;
-    text-indent: $basic;
-    border: 1px solid grey;
+    @media screen and (min-width: 721px) {
+      width: 100%;
+      margin: $basic auto;
+      line-height: $basic * 2;
+      text-indent: $basic;
+      border: 1px solid grey;
+    }    
   }
   #submit {
-    width: 100%;
-    padding: $basic / 2 $basic * 2;
-    color: $color-main;
-    border-bottom: $basic / 6 solid $color-dark;
-    box-shadow: 0 $basic/4 $basic/2 rgba(0,0,0,.5);
-    &:hover {
-      border-bottom: $basic / 6 solid $color-main;
-    }
-    &:active {
-      transform: translateY(1px);
+    @media screen and (min-width: 721px) {
+      width: 100%;
+      margin: $basic auto;
+      line-height: $basic * 2;
+      color: $color-main;
+      border-bottom: $basic / 6 solid $color-dark;
+      box-shadow: 0 $basic/4 $basic/2 rgba(0,0,0,.5);
+      &:hover {
+        border-bottom: $basic / 6 solid $color-main;
+      }
+      &:active {
+        transform: translateY(1px);
+      }
     }
   }
 }

@@ -261,27 +261,54 @@ svg.owllogo {
 }
 
 #contacts {
-  background: url(../img/footr.jpg) center no-repeat;
-  background-size: cover;
+  background: #3e596a;
+}
+
+@media screen and (min-width: 721px) {
+  #contacts {
+    background: url(../img/footr.jpg) center no-repeat;
+    background-size: cover;
+  }
 }
 
 .image {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 35%;
-  margin: 5%;
-  padding: 2.5%;
+  display: none;
+}
+
+@media screen and (min-width: 721px) {
+  .image {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 35%;
+    margin: 5%;
+    padding: 2.5%;
+  }
 }
 
 .content {
-  display: inline-block;
-  vertical-align: top;
-  position: relative;
-  width: 35%;
-  margin: 5%;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 2.5%;
+  display: block;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #d9d7da;
+  overflow: hidden;
+}
+
+.content > * {
+  margin: 8px 16px;
+}
+
+@media screen and (min-width: 721px) {
+  .content {
+    display: inline-block;
+    vertical-align: top;
+    width: 35%;
+    margin: 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 2.5%;
+  }
 }
 
 .content h3 {
@@ -307,28 +334,31 @@ svg.owllogo {
   background-color: whitesmoke;
 }
 
-.content #fromemail, .content #lettertitle {
-  width: 100%;
-  margin: 16px auto;
-  line-height: 32px;
-  text-indent: 16px;
-  border: 1px solid grey;
+@media screen and (min-width: 721px) {
+  .content #fromemail, .content #lettertitle {
+    width: 100%;
+    margin: 16px auto;
+    line-height: 32px;
+    text-indent: 16px;
+    border: 1px solid grey;
+  }
 }
 
-.content #submit {
-  width: 100%;
-  padding: 8px 32px;
-  color: #3e596a;
-  border-bottom: 2.66667px solid #0c2b3f;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-.content #submit:hover {
-  border-bottom: 2.66667px solid #3e596a;
-}
-
-.content #submit:active {
-  transform: translateY(1px);
+@media screen and (min-width: 721px) {
+  .content #submit {
+    width: 100%;
+    margin: 16px auto;
+    line-height: 32px;
+    color: #3e596a;
+    border-bottom: 2.66667px solid #0c2b3f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  .content #submit:hover {
+    border-bottom: 2.66667px solid #3e596a;
+  }
+  .content #submit:active {
+    transform: translateY(1px);
+  }
 }
 
 #socials {
