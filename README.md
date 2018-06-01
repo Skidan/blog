@@ -13,7 +13,8 @@ Resource consists of:
 * Portfolio
 
 ### Concept
-Minimalistic, absolutely adjustable, mobile-first, flexible and cross-browser adaptive design, user-friendly, with minimum of server connections. 
+Minimalistic, absolutely adjustable, mobile-first, flexible and cross-browser adaptive design, user-friendly, with minimum of server connections.
+Like a printed card...
 ### Design
 Material design + inline-svg. Minimum of raster graphics. Light-weighed mobile look. Min-width: **240 px**, max-width: **3840 px**.
 
